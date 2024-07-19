@@ -25,7 +25,7 @@ DEBUG = True
 
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['.vercel.app', '*']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 STATIC_URL = '/static/'
 
@@ -118,5 +118,12 @@ USE_I18N = True
 
 USE_TZ = True
 
+
+if os.environ.get ("VERCEL"):
+    
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+    # Turn on WhiteNoise storage backend that takes care of compressing static files
+    # and creating unique nomes for each version
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 ## WHY IS STATIC FIL NOT LOADING
