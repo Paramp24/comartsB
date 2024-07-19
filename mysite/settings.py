@@ -117,4 +117,14 @@ USE_I18N = True
 USE_TZ = True
 
 
+
+if not DEBUG:
+    from django.contrib.staticfiles.storage import ManifestStaticFilesStorage
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  ##  the path to directory where collectstatic will collect 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
