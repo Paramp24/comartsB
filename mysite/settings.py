@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-
+ 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,12 +25,7 @@ DEBUG = True
 
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-#try changing this staticfile_dir
+ALLOWED_HOSTS = ['.vercel.app', '*']
 
  
 # Application definition
@@ -50,7 +45,6 @@ ASGI_APPLICATION = 'mysite.asgi.application'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.storage.CompressedManifestStaticFilesStorage',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -76,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mysite.wsgi.app'
+WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -123,11 +117,4 @@ USE_I18N = True
 USE_TZ = True
 
 
-if os.environ.get ("VERCEL"):
-    
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-    # Turn on WhiteNoise storage backend that takes care of compressing static files
-    # and creating unique nomes for each version
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-## WHY IS STATIC FIL NOT LOADING
+STATIC_URL = '/static/'
