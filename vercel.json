@@ -1,19 +1,14 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "mysite/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb",
-                "runtime": "python3.9"
-            }
-        }
+      { "src": "mysite/wsgi.py", "use": "@vercel/python" }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "mysite/wsgi.py"
-        }
-    ]
-}
+      { "src": "/static/(.*)", "dest": "/static/$1" }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "mysite.settings",
+      "DATABASE_URL": "postgres://user:password@host:port/dbname"
+    }
+  }
+  
