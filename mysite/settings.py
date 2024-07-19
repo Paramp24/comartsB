@@ -17,8 +17,11 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-STATIC_URL = 'static'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]
+
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%!*k&17&_+6f8shly&bfi48*jp$tcgjl$5sm2$(_g(^)iumm9x'
@@ -119,14 +122,3 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-
-STATIC_URL = '/static/'
-
-# The directory where static files will be collected to
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Directories where Django will search for static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
