@@ -26,6 +26,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['.vercel.app', '*']
+
 STATIC_URL = '/static/'
 
  
