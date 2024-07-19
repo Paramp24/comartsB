@@ -12,7 +12,7 @@
       }
     }
   ],
-  "routes": [
+  "routes": [k
     {
       "src": "/(.*)",
       "dest": "mysite/wsgi.py"
