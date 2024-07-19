@@ -1,0 +1,57 @@
+<!-- main/dashboard.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+    <div class="container">
+
+        <section class="search-bar">
+            {% block content %}
+            <h2>Search for Services or Companies</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="search_query" placeholder="Enter search query...">
+                <button type="submit">Search</button>
+            </form>
+            {% endblock %}
+        </section>
+
+        <section class="postings-section">
+            <h1>Service Postings</h1>
+            <div class="postings-container">
+                {% for service_posting in service_postings %}
+                <div class="posting">
+                    <h3>{{ service_posting.title }}</h3>
+                    <p>{{ service_posting.services_needed }}</p>
+                    <p>{{ service_posting.location }}</p>
+                    <!-- Add more fields as needed -->
+                </div>
+                {% endfor %}
+            </div>
+
+            <h1>Business Postings</h1>
+            <div class="postings-container">
+                {% for business_posting in business_postings %}
+                <div class="posting">
+                    <h3>{{ business_posting.name }}</h3>
+                    <p>{{ business_posting.industry }}</p>
+                    <p>{{ business_posting.estimated_pricing }}</p>
+                    <!-- Add more fields as needed -->
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
