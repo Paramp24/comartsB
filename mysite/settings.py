@@ -49,7 +49,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 
 ]
 
@@ -119,7 +118,6 @@ USE_TZ = True
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # dont delete the top 3 lines they cannot be the problem
