@@ -116,11 +116,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-WSGI_APPLICATION = 'mysite.wsgi.application'
+WSGI_APPLICATION = 'mysite.wsgi.app'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'main/static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+#STATICFILES_DIRS = os.path.join(BASE_DIR, 'main/static'),
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # dont delete the top 3 lines they cannot be the proble
