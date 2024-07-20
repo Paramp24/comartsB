@@ -22,8 +22,6 @@ SECRET_KEY = 'django-insecure-%!*k&17&_+6f8shly&bfi48*jp$tcgjl$5sm2$(_g(^)iumm9x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
-
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['.vercel.app', '*']
 
@@ -50,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 
 ]
 
@@ -119,4 +119,6 @@ USE_TZ = True
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
