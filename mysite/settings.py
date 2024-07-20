@@ -122,5 +122,4 @@ STATIC_URL = '/static/'
 
 #STATICFILES_DIRS = os.path.join(BASE_DIR, 'main/static'),
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
 # dont delete the top 3 lines they cannot be the proble
