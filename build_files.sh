@@ -12,12 +12,12 @@ echo "Venv Activated"
 echo "now download packages"
 
 # install all deps in the venv
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 echo "now packages download"
 
 # collect static files using the Python interpreter from venv
-python manage.py collectstatic --noinput
+python3 manage.py collectstatic --noinput
 
 echo "BUILD END"
 
