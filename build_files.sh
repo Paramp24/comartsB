@@ -1,7 +1,7 @@
 echo "BUILD START"
 
 # create a virtual environment named 'venv' if it doesn't already exist
-python -m venv env
+python3 -m venv env
 
 # activate the virtual environment
 source env/bin/activate
