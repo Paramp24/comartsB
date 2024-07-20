@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}" type="text/css">
+
+    <title>{% block title %}CoMarts{% endblock %}</title>
+</head>
+
+<body>
+    <div class="base-container">
+        <header>
+            <div class="header-left">
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div class="header-center">
+                CoMarts
+            </div>
+            <div class="header-right">
+                <a href="{% url 'ServiceRequestPage' %}">Post an Ad</a>
+
+                <button>Settings</button>
+            </div>
+        </header>
+
+        <main>
+            {% block content %}
+            <!-- Default content -->
+            {% endblock %}
+        </main>
+    </div>
+</body>
+
+</html>

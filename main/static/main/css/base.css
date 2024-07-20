@@ -1,0 +1,43 @@
+/* Basic styling for the header within .base-container */
+.base-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.base-container .header-left,
+.base-container .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.base-container .header-left a,
+.base-container .header-right a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.base-container .header-center {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.base-container .header-right a:hover,
+.base-container .header-left a:hover {
+    text-decoration: underline;
+}
+
+/* Other styles scoped to .base-container */
+.base-container .container {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+}
