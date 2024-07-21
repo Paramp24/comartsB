@@ -1,19 +1,21 @@
+{% extends "main/base.html" %}
+{% block title %}CoMarts{% endblock %}
+
 <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
 </head>
 
 <div class="container">
+    {% block content %}
 
     <section class="search-bar">
-        {% block content %}
         <h2>Search for Services or Companies</h2>
         <form method="post">
             {% csrf_token %}
             <input type="text" name="search_query" placeholder="Enter search query...">
             <button type="submit">Search</button>
         </form>
-        {% endblock %}
     </section>
 
     <section class="postings-section">
@@ -43,3 +45,5 @@
     </section>
 
 </div>
+
+{% endblock %}

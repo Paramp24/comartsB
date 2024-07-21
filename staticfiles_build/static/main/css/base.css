@@ -1,5 +1,5 @@
 /* Basic styling for the header within .base-container */
-.base-container header {
+.base-container .base-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
