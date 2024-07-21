@@ -215,3 +215,6 @@ def verificationCode(request):
         form = VerificationCodeForm()
     
     return render(request, 'main/verificationForm.html', {'form': form})
+
+'''def index(request):
+    return render(request, 'main/index.html')'''
