@@ -14,9 +14,21 @@
     background-color: #f9f9f9;
 }
 
+
+body {
+    background: linear-gradient(135deg, #003b5c, #0067a3, #00b2e2, #66d8ff);
+    min-height: 100vh; /* 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+    background-size: cover; /* Cover the entire background without repeating */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    background-attachment: fixed; /* Fix the background in place */
+    background-position: center; /* Center the background */
+}
+
+
 /* Header color */
 .headerColor {
-    background-color: var(--header-color); /* Adjust the color as needed */
+    background-color: var(--header-color); /* f9f9f9 */
     height: 10px;
     border-radius: 10px 10px 0 0;
 }
