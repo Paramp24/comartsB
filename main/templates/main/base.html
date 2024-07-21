@@ -22,15 +22,28 @@
             </div>
             <div class="header-right">
                 <a href="{% url 'ServiceRequestPage' %}">Post an Ad</a>
+                <a href="#" onclick="toggleHeaderBackground()" class="settings"><i class="fa-solid fa-gear"></i></a>
 
-                <button>Settings</button>
             </div>
         </header>
 
-            {% block content %}
-            <!-- Default content -->
-            {% endblock %}
+        {% block content %}
+        <!-- Default content -->
+        {% endblock %}
     </div>
+
+    
+
 </body>
 
+<script src="https://kit.fontawesome.com/2021acc0df.js" crossorigin="anonymous"></script>
+
+<script>
+    function toggleHeaderBackground() {
+        const header = document.querySelector('.settings');
+        header.classList.toggle('hidden');
+        console.log(header.classList);
+    }
+
+</script>
 </html>
