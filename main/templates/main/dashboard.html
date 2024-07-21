@@ -1,13 +1,16 @@
 {% extends "main/base.html" %}
-{% block title %}CoMarts{% endblock %}
+
+{% block title %}CoMarts: Login{% endblock %}
+
+{% block content %}
+
+{% load static %}
 
 <head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}" type="text/css">
 </head>
 
 <div class="container">
-    {% block content %}
 
     <section class="search-bar">
         <h2>Search for Services or Companies</h2>
@@ -45,5 +48,5 @@
     </section>
 
 </div>
-
 {% endblock %}
+
