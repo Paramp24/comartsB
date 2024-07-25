@@ -217,6 +217,7 @@
   .about-div .btn-fill {
 	background: #fabf15 !important;
 	color: #222 !important;
+	margin-bottom: 40px;
   }
   .about-div  .btn-fill:hover {
 	background: #ffb400;
@@ -225,6 +226,7 @@
   .about-div .about-info {
 	border: 2px solid rgba(255, 255, 255, 0.2);
   }
+
   .about-div  #about-section img {
 	position: relative;
 	z-index: 1;
