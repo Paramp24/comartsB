@@ -15,7 +15,6 @@ urlpatterns = [
     path("user/<str:username>/", views.viewProfile, name="viewProfile"),
     path('verify/', views.verificationCode, name='verificationCode'),
     path("review/", views.review, name="review"),
-    
 
 ]
 
