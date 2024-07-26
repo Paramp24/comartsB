@@ -4,17 +4,46 @@
 
 {% block content %}
 {% load static %}
+
 <head>
     <link rel="stylesheet" href="{% static 'main/css/loginAndSignup.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- FontAwesome Icons -->
 </head>
 
-<div class="container">
-    <div class="headerColor"></div>
-    <h2>Sign Up</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Sign Up</button>
-    </form>
-</div>
+<body>
+
+    <div class="form_wrapper">
+        <div class="title_container">
+            <h2>Sign Up</h2>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="input_field">
+                <span><i class="fas fa-user"></i></span>
+                {{ form.username }}
+            </div>
+            <div class="input_field">
+                <span><i class="fas fa-envelope"></i></span>
+                {{ form.email }}
+            </div>
+            <div class="input_field">
+                <span><i class="fas fa-lock"></i></span>
+                {{ form.password1 }}
+            </div>
+            <div class="input_field">
+                <span><i class="fas fa-lock"></i></span>
+                {{ form.password2 }}
+            </div>
+            <div class="input_field select_option">
+                {{ form.account_type }}
+                <div class="select_arrow"></div>
+            </div>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+    
+    <script src='https://use.fontawesome.com/4ecc3dbb0b.js'></script>
+
+</body>
 {% endblock %}
