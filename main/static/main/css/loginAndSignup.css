@@ -1,3 +1,18 @@
+:root {
+    --link-hover: rgb(140, 190, 255);
+    --logo-color: #49acfc;
+    --button-color-one: mediumpurple;
+    --button-color-two: rgb(125, 78, 220);
+    --titleBreakColor: #46acff;
+    --about-div-bg-color: #5487ff;
+    --about-div-color: #ff99c8;
+    --light-pink: #f1e9db;
+    --dark-pink: #aaedff;
+    --footer-bg-color: rgb(233, 191, 245);
+  
+  }
+  
+
 body {
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
@@ -21,7 +36,7 @@ body {
     margin: 8% auto 0;
     position: relative;
     z-index: 1;
-    border-top: 5px solid #f5ba1a;
+    border-top: 5px solid var(--about-div-bg-color);
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -105,11 +120,11 @@ body {
     -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
     -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
     box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-    border: 1px solid #f5ba1a;
+    border: 1px solid var(--about-div-bg-color);
     background: #fafafa;
   }
   .form_wrapper input[type=submit] {
-    background: #f5ba1a;
+    background: var(--about-div-bg-color);
     height: 35px;
     line-height: 35px;
     width: 100%;
