@@ -810,3 +810,11 @@ list-style:none;
 .footer .social-link {
   margin: 0 0 30px;
 }
+
+#post-an-ad{
+  background-color: rgb(35, 62, 179);
+  padding: 10px;
+  border-radius: 14px;
+  color: white;
+}
+
