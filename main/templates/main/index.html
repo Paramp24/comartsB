@@ -1,1 +1,208 @@
-<h1>index</h1>
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>CoMarts</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'main/css/landingPage.css' %}" type="text/css">
+  
+</head>
+
+<body>
+
+  <!--    MAIN PAGE    -->
+
+  <header data-headroom class="header fixed-top">
+    <nav id="home" class="navbar navbar-expand-lg text-uppercase py-0">
+      <a class="navbar-brand d-lg-none py-0 ms-4 me-0" href="https://www.badiali.es">
+        Co <span class="fw-bold logo-color">Marts</span>
+      </a>
+      <div class="offcanvas offcanvas-end vh-100" tabindex="-1" id="navbarOffcanvasLg"
+        aria-labelledby="navbarOffcanvasLgLabel">
+        <div class="container-lg">
+          <div class="row flex-grow-1 p-4 p-lg-0">
+            <div class="d-flex d-lg-block col-lg-4 order-1 order-lg-2 text-lg-center">
+              <button type="button" class="d-lg-none border-0 bg-transparent p-0 ms-auto" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar">
+                <i class="fa-solid fa-close"></i>
+              </button>
+              <a class="navbar-brand d-none d-lg-block py-0 me-0" href="https://www.badiali.es">
+                Co <span class="fw-bold logo-color">Marts</span>
+              </a>
+            </div>
+            <div class="col-lg-4 order-2 order-lg-1 ms-auto ms-lg-0">
+              <ul class="navbar-nav d-flex flex-column flex-lg-row">
+                <li class="nav-item me-4 me-xxl-5">
+                  <a class="nav-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Home</a>
+                </li>
+                <li class="nav-item me-4 me-xxl-5">
+                  <a class="nav-link" href="https://www.linkedin.com/in/badiali/">About</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 order-3">
+              <ul class="navbar-nav d-flex flex-column flex-lg-row justify-content-lg-end">
+                <li class="nav-item me-4 me-xxl-5">
+                  <a class="nav-link" href="">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.badiali.es">Post An Ad</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <main class="main left">
+    <figure class="cover-image position-relative w-100 vh-100 d-flex align-items-center justify-content-center mb-0">
+      <figcaption class="cover-image__title position-relative text-center px-3 px-md-0">
+        <h1 class="display-1 text-uppercase fw-semibold mb-4">
+          <span class="titleBreakColortwo">Avoid </span>Scams, <br>Find <span class="titleBreakColor"> Quality</span>
+        </h1>
+        <p class="lead text-center mb-5">
+
+          CoMarts Connects You With Honest And Quailty <br>Service Providers, Ensuring You Get The Best Value With
+          Simplicity.
+        </p>
+        <a class="btn btn-sm btn-dark text-uppercase px-4 py-3 rounded-3 border-0 mediumpurpleone "
+          href="https://www.badiali.es">Register</a>
+        <a class="btn btn-sm btn-dark text-uppercase px-4 py-3 rounded-3 border-0 mediumpurpletwo"
+          href="https://www.badiali.es">Login</a>
+
+      </figcaption>
+      <div class="mouse position-absolute">
+        <div class="mouse-scroll position-relative bg-white"></div>
+      </div>
+    </figure>
+  </main>
+
+  <!--    ABOUT US PAGE    -->
+
+  <div class="about-div">
+    <section id="about-section" class="p-100 pb-2 bg-one-dark">
+      <div class="container">
+        <div class="row d-flex align-items-end container2">
+          <div class="col-md-6 text-center">
+            <img src="{% static 'main/media/aboutUs.jpg' %}" alt="Signature" class="img-fluid" style="margin-bottom: 20px;">
+          </div>
+          <div class="col-md-6">
+
+            <p class="color-base">About Us & Our Mission</p>
+
+            <h2 class="text-white mb-4">Bringing You <span class="color-base">Reliable Service </span>Connections
+            </h2>
+            <p>At CoMarts, we specialize in finding and referring verified businesses with excellent track records and
+              honest contracts. Our platform aims prioritize customer satisfaction and professionalism, especially in
+              industries with a low barrier to entry. Once you post your job on our website, we handle the rest,
+              ensuring a smooth and hassle-free experience, all for free!
+            </p>
+            <div class="row">
+              <div class="col-md-6 about-bullet">
+                <ul class="bullet-check">
+                  <li>Verified Business And Reviews</li>
+                  <li>Minimizing Scams And Breached Contracts</li>
+                  <li>Hassle-Free Job Posting</li>
+                </ul>
+              </div>
+              <div class="col-md-6 about-bullet">
+                <ul class="bullet-check">
+                  <li>Free Services</li>
+                  <li>Honest Contracts With Transparent Pricing</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="wrap-button mt-50">
+              <a href="#" class="btn btn-medium btn-inline btn-fill mr-4" style="margin-bottom: 20px;">Post An Ad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--    CONTACT US PAGE    -->
+  <section class="contact-section">
+    <div class="contact-div">
+      <div class="container">
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              dolorum adipisci recusandae praesentium dicta!
+            </p>
+
+            <div class="info">
+              <div class="information">
+                <i class="fas fa-envelope"></i> &nbsp &nbsp
+                <p>comarts@gmail.com</p>
+              </div>
+              <div class="information">
+                <i class="fas fa-phone"></i>&nbsp&nbsp
+                <p>416-435-8512</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <form action="index.html" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                <input type="text" name="name" class="input" />
+                <label for="">Username</label>
+                <span>Username</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" />
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input"></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js'></script>
+  
+  <script src="{% static 'main/script/landingPage.js' %}"></script>
+
+
+</body>
+
+</html>
