@@ -22,11 +22,12 @@ class SignUpForm(forms.ModelForm):
         })
     )
     account_type = forms.ChoiceField(
-        choices=[('individual', 'Individual'), ('business', 'Business')],
+        choices=[('', 'Select Account Type'), ('individual', 'Individual'), ('business', 'Business Owner')],
+        required=True,
         widget=forms.Select(attrs={
             'class': 'select_option',
         })
-    )
+    )    
 
     class Meta:
         model = User
