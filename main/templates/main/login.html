@@ -1,15 +1,27 @@
-{% extends "main/base.html" %}
-
-{% block title %}CoMarts: Login{% endblock %}
-
-{% block content %}
-
 {% load static %}
+
 <head>
+    <title>CoMarts: Login</title>
     <link rel="stylesheet" href="{% static 'main/css/loginAndSignup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}" type="text/css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- FontAwesome Icons -->
 
 </head>
+
+<body>
+    
+    <div class="base-container">
+        <header class="base-header">
+            <div class="header-center">
+                CoMarts
+            </div>
+        </header>
+
+        {% block content %}
+        <!-- Default content -->
+        {% endblock %}
+    </div>
 
 <div class="form_wrapper">
     <div class="title_container">
@@ -29,4 +41,5 @@
     </form>
 </div>
 
-{% endblock %}
+</body>
+

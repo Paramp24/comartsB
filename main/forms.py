@@ -66,7 +66,8 @@ class CustomAuthenticationForm(AuthenticationForm):
             'placeholder': 'Password',
         })
     )
-
+    
+    
 class ServiceRequestForm(forms.ModelForm):
     
     SERVICES_CHOICES = [
