@@ -1,8 +1,7 @@
 from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
-from .forms import SignUpForm, ServiceRequestForm, SearchForServicesOrCompany, BusinessProfileForm, ReviewForm, VerificationCodeForm
+from .forms import SignUpForm, ServiceRequestForm, SearchForServicesOrCompany, BusinessProfileForm, ReviewForm, VerificationCodeForm, CustomAuthenticationForm
 from .models import ServiceRequest, BusinessProfile, User, Review
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .email_sender import AccountActivationManager
@@ -35,7 +34,7 @@ def signup_view(request):
 
 def login_view(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, data=request.POST)
+        form = CustomAuthenticationForm(request, data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
@@ -44,7 +43,7 @@ def login_view(request):
                 login(request, user)
                 return redirect('/home')  # Replace 'home' with your home view name
     else:
-        form = AuthenticationForm()
+        form = CustomAuthenticationForm()
     return render(request, 'main/login.html', {'form': form})
 
 @login_required

@@ -46,8 +46,8 @@ body {
     transform: scale3d(1, 1, 1);
     -webkit-transition: none;
     transition: none;
-    -webkit-animation: expand 0.8s 0.6s ease-out forwards;
-    animation: expand 0.8s 0.6s ease-out forwards;
+    -webkit-animation: expand 0.8s ease-out forwards;
+    animation: expand 0.8s ease-out forwards;
     opacity: 0;
   }
   .form_wrapper h2 {
