@@ -1,0 +1,151 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-info {
+    background-color: #f0f0f0;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 10px 0;
+    max-width: 600px;
+    flex-basis: 100%;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.account {
+    position: relative;
+}
+
+.account button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.account button:hover {
+    background-color: #0056b3;
+}
+
+.account-icon {
+    margin-right: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown-menu button {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar {
+        order: 1;
+    }
+
+    .account {
+        order: 2;
+        align-self: flex-end;
+    }
+
+    .account button {
+        font-size: 0;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        color: #007bff;
+    }
+
+    .account-icon {
+        display: inline;
+        font-size: 24px;
+    }
+
+    .account-text {
+        display: none;
+    }
+}

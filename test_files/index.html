@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Header</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="contact-info">
+            <p>Feel free to reach out: 416-435-8512 or admin@comarts.com</p>
+        </div>
+        <div class="header-content">
+            <h1 class="logo">CoMarts</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button type="submit">&#128269;</button>
+            </div>
+            <div class="account">
+                <button type="button" class="account-btn" onclick="toggleDropdown()">
+                    <span class="account-icon">&#128100;</span>
+                    <span class="account-text">Account</span>
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <button type="button">Delete Account</button>
+                    <button type="button">Logout</button>
+                    <button type="button">Business Profile</button>
+                    <button type="button">Post an Ad</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="./index.js"></script>
+</body>
+
+</html>

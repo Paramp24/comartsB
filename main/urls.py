@@ -17,6 +17,3 @@ urlpatterns = [
     path("review/", views.review, name="review"),
 
 ]
-
-
-
