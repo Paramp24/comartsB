@@ -1,53 +1,78 @@
-{% extends "main/base.html" %}
-
-{% block title %}CoMarts: Login{% endblock %}
 
 {% block content %}
 
 {% load static %}
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="{% static 'main/css/home.css' %}" type="text/css">
 </head>
 
-<div class="container">
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">CoMarts</div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="search-bar">
-        <h2>Search for Services or Companies</h2>
-        <form method="post">
-            {% csrf_token %}
-            <input type="text" name="search_query" placeholder="Enter search query...">
-            <button type="submit">Search</button>
-        </form>
-    </section>
+    <div class="container">
 
-    <section class="postings-section">
-        <h1>Service Postings</h1>
-        <div class="postings-container">
-            {% for service_posting in service_postings %}
-            <div class="posting">
-                <h3>{{ service_posting.title }}</h3>
-                <p>{{ service_posting.services_needed }}</p>
-                <p>{{ service_posting.location }}</p>
-                <!-- Add more fields as needed -->
+        <section class="search-bar">
+            <h2>Search for Services or Companies</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="search_query" placeholder="Enter search query...">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="postings-section">
+            <h1>Service Postings</h1>
+            <div class="postings-container">
+                {% for service_posting in service_postings %}
+                <div class="posting">
+                    <h3>{{ service_posting.title }}</h3>
+                    <p>{{ service_posting.services_needed }}</p>
+                    <p>{{ service_posting.location }}</p>
+                    <!-- Add more fields as needed -->
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
 
-        <h1>Business Postings</h1>
-        <div class="postings-container">
-            {% for business_posting in business_postings %}
-            <div class="posting">
-                <h3>{{ business_posting.name }}</h3>
-                <p>{{ business_posting.industry }}</p>
-                <p>{{ business_posting.estimated_pricing }}</p>
-                <!-- Add more fields as needed -->
+            <h1>Business Postings</h1>
+            <div class="postings-container">
+                {% for business_posting in business_postings %}
+                <div class="posting">
+                    <h3>{{ business_posting.name }}</h3>
+                    <p>{{ business_posting.industry }}</p>
+                    <p>{{ business_posting.estimated_pricing }}</p>
+                    <!-- Add more fields as needed -->
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-    </section>
+        </section>
 
-</div>
+    </div>
+
+    <!-- Script for Menu Toggle -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+
+</body>
 
 {% endblock %}
-
